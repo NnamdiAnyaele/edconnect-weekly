@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head> 
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Homepage</title> 
+  <title>Profile</title> 
  </head> 
  <body> 
   <header> 
@@ -36,15 +36,15 @@
       <input type="email" id="email" name="email"><br><br>
       <label for="matricNumber">Matric Number:</label>
       <input type="text" id="matricNumber" name="matricNumber">
-    </form><br>
+    <br><br>
     <label for="program">Program:</label>
-    <select name="program" id="program" form="updateProfile">
+    <select name="program" id="program">
       <option value="computer_science">Computer Science</option>
       <option value="computer_information_systems">Computer Information Systems</option>
       <option value="computer_technology">Computer Technology</option>
     </select> <br><br>
       <label for="graduationYear">Graduation Year:</label>
-    <select name="graduationYear" id="graduationYear" form="updateProfile">
+    <select name="graduationYear" id="graduationYear" >
       <option value="2013">2013</option>
       <option value="2014">2014</option>
       <option value="2015">2015</option>
@@ -54,17 +54,18 @@
       <option value="2019">2019</option>
       <option value="2020">2020</option>
     </select> <br><br>
-    <input type="submit" form="updateProfile">
+    <input type="submit">
+    </form>
    </section> 
    <section> 
      <h2>Change Password</h2>
      <form id="changePassword" name="changePassword">
       <label for="currentPassword">Current Password:</label>
-      <input type="currentPassword" id="currentPassword" name="currentPassword"><br><br>
+      <input type="password" id="currentPassword" name="currentPassword"><br><br>
       <label for="newPassword">New Password:</label>
-      <input type="newPassword" id="newPassword" name="newPassword"><br><br>
+      <input type="password" id="newPassword" name="newPassword"><br><br>
       <label for="confirmPassword">Confirm Password:</label>
-      <input type="confirmPassword" id="confirmPassword" name="confirmPassword"><br><br>
+      <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
       <input type="submit">
      </form>
    </section> 

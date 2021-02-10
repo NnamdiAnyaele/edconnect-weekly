@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head> 
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Homepage</title> 
+  <title>Edit Project</title> 
  </head> 
  <body> 
   <header> 
@@ -25,28 +25,29 @@
       </ul>
     </section>
     <section>
-      <h2>Submit Project</h2> 
+      <h2>Edit Project</h2> 
       <form id="editProject" name="editProject"> 
         <label for="name">Project Name:</label> 
           <br> 
         <input type="text" id="name" name="name">
-      </form> <br>
+      <br><br>
       <label for="abstract">Project Abstract:</label><br>
-     <textarea id="abstract" name="abstract" form="editProject"></textarea>
+     <textarea id="abstract" name="abstract"></textarea>
        <br><br>
      <label for="authors">Authors:</label> 
        <br>
-     <input type="text" id="authors" name="authors" form="editProject">
+     <input type="text" id="authors" name="authors">
        <br><br>
      <label for="tags">Tag(s):</label> 
        <br> 
-     <input type="text" id="tags" name="tags" form="editProject">
+     <input type="text" id="tags" name="tags">
        <br><br>
      <label for="projectFile">Upload File</label>
      <br>
      <input type="file" name="projectFile" id="projectFile">
        <br><br>
-     <input type="submit" form="editProject">
+     <input type="submit">
+     </form>
       </section>
     </main>
   </body>
