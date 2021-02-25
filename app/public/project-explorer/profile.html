@@ -1,0 +1,104 @@
+<!doctype html><html lang="en"><head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="css/bootstrap.min.css"> 
+  <title>Profile</title> 
+ </head> 
+ <body> 
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary"> 
+   <a href="index.html" class="navbar-brand">Project Explorer</a> 
+   <form name="searchForm" class="form-inline"> 
+    <input type="text" class="form-control mr-sm-2" placeholder="Search Projects"> 
+    <button type="submit" class"btn btn-outline-light">Search</button> 
+   </form> 
+   <ul class="navbar-nav"> 
+    <li class="nav-item"> <a href="createproject.html" class="nav-link">Submit</a> </li> 
+   </ul> 
+   <ul class="navbar-nav ml-auto"> 
+    <li class="nav-item"> <a href="register.html" class="nav-link">Sign up</a> </li> 
+    <li class="nav-item"> <a href="login.html" class="nav-link">Login</a> </li> 
+   </ul> 
+  </nav> 
+  <main> 
+   <div class="container"> 
+    <h1 style="margin-top:50px;">John Doe <small class="text-secondary">john.doe@gmail.com</small></h1> 
+    <div class="row bg-light"> 
+     <div class="col-md-4"> 
+      <p>Program<br>Computer Information Systems</p> 
+     </div> 
+     <div class="col-md-4"> 
+      <p>Matriculation number<br>33/3333 </p> 
+     </div> 
+     <div class="col-md-4"> 
+      <p>Graduation year<br>2018</p> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="container mx-auto w-75"> 
+    <h2 style="margin-top: 50px;">Update Profile</h2> 
+    <hr> 
+    <form id="signUp" name="signUp"> 
+     <div class="form-row mb-2"> 
+      <div class="col"> 
+       <label class="form-label" for="firstName">First Name</label> 
+       <input class="form-control" type="text" id="firstName" name="firstName"> 
+      </div> 
+      <div class="col"> 
+       <label class="form-label" for="lastName">Last Name</label> 
+       <input class="form-control" type="text" id="lastName" name="lastName"> 
+      </div> 
+     </div> 
+     <div class="form-row mb-2"> 
+      <div class="col"> 
+       <label class="form-label" for="email">Email Address</label> 
+       <input class="form-control" type="email" id="email" name="email"> 
+      </div> 
+      <div class="col"> 
+       <label class="form-label" for="program">Program</label> 
+       <select class="form-control" name="program" id="program"><option selected>Choose...</option> <option value="computer_science">Computer Science</option> <option value="computer_information_systems">Computer Information Systems</option> <option value="computer_technology">Computer Technology</option> </select> 
+      </div> 
+     </div> 
+     <div class="form-row"> 
+      <div class="form-group col-md-6"> 
+       <label class="form-label" for="matricNumber">Matric Number</label> 
+       <input class="form-control" type="text" id="matricNumber" name="matricNumber" placeholder="e.g 12/2020"> 
+      </div> 
+      <div class="form-group col-md-6"> 
+       <label class="form-label" for="graduationYear">Graduation Year</label> 
+       <select class="form-control" name="graduationYear" id="graduationYear"> <option selected>Choose...</option> <option value="2013">2013</option> <option value="2014">2014</option> <option value="2015">2015</option> <option value="2016">2016</option> <option value="2017">2017</option> <option value="2018">2018</option> <option value="2019">2019</option> <option value="2020">2020</option> </select> 
+      </div> 
+     </div> 
+     <input type="submit" class="btn btn-primary" value="Update Profile"> 
+    </form> 
+   </div> 
+   <div class="container mx-auto w-75"> 
+    <h2 style="margin-top:50px;">Change Password</h2> 
+    <hr> 
+    <form> 
+     <div class="form-row"> 
+      <div class="form-group col-md-4"> 
+       <label class="form-label" for="current-password">Current Password</label> 
+       <input class="form-control" type="password" id="current-password" name="current-password" placeholder="Current Password"> 
+      </div> 
+      <div class="form-group col-md-4"> 
+       <label class="form-label" for="new-password">New Password</label> 
+       <input class="form-control" type="password" id="new-password" name="new-password" placeholder="Your new password"> 
+      </div> 
+      <div class="form-group col-md-4"> 
+       <label class="form-label" for="confirm-password">Confirm Password</label> 
+       <input class="form-control" type="password" id="confirm-password" name="current-password" placeholder="Confirm new password"> 
+      </div> 
+      <input type="submit" class="btn btn-primary" value="Change Password"> 
+     </div> 
+    </form> 
+   </div> 
+  </main> 
+  <footer> 
+   <div class="container bg-light pt-3 my-3"> 
+    <div class="d.flex"> 
+     <p class="text-secondary text-right" ">Project Explorer © 2021 . <span class="text-body">Edconnect</span> </p> 
+    </div> 
+   </div> 
+  </footer> 
+ 
+</body></html>
