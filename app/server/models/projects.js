@@ -14,7 +14,7 @@ class Project {
 class Projects extends DataModel {
     validate(obj) {
     let emptyProp = Object.values(obj).some(x => (x === null || x === ''))
-      if(Array.isArray(obj.authors) && Array.isArray(obj.tags) && !isEmpty) {
+      if(Array.isArray(obj.authors) && Array.isArray(obj.tags) && !emptyProp) {
         return true
       }
       else {

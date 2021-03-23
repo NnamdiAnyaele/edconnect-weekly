@@ -29,7 +29,7 @@ class DataModel {
         return false
       }
       for (let prop in user) {
-        obj[prop] = user[prop]
+        user[prop] = obj[prop];
       }
       return true
     }
