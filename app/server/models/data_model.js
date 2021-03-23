@@ -41,6 +41,7 @@ class DataModel {
     }
     let index = this.data.indexOf(user);
     user.splice(index, 1)
+    return true
     }
 
     // this method will be overriden in the sub classes
