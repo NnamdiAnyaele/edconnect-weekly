@@ -13,7 +13,7 @@ class User {
     }
 
     getFullName() {
-      return `${firstname} ${lastname}`
+      return `${this.firstname} ${this.lastname}`
 
     }
 }

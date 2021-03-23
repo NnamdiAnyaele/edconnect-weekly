@@ -28,7 +28,7 @@ class DataModel {
       if (!user) {
         return false
       }
-      for (let prop of user) {
+      for (let prop in user) {
         obj[prop] = user[prop]
       }
       return true
