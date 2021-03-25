@@ -45,9 +45,9 @@ class Users extends DataModel {
 
     validate(obj) {
     let emptyProp = Object.values(obj).some(x => (x == null || x == ''));
-    let userEmail = this.data.some(myObj => myObj.email == obj.email)
-    let userMatric = this.data.some(myObj => myObj.matricNumber == obj.matricNumber)
-    if(emptyeProp || userByEmail || userByMatric || obj.password.length < 7) {
+    let userByEmail = this.data.some(myObj => myObj.email == obj.email)
+    let userByMatric = this.data.some(myObj => myObj.matricNumber == obj.matricNumber)
+    if(emptyProp || userByEmail || userByMatric || obj.password.length < 7) {
       return false
     } else {
         return true
