@@ -40,7 +40,7 @@ class DataModel {
       return false
     }
     let index = this.data.indexOf(user);
-    user.splice(index, 1)
+     this.data.splice(index, 1)
     return true
     }
 
