@@ -43,16 +43,29 @@ class Users extends DataModel {
     return null;
     }
 
-    validate(obj) {
-    let emptyProp = Object.values(obj).some(x => (x == null || x == ''));
-    let userByEmail = this.data.some(myObj => myObj.email == obj.email)
-    let userByMatric = this.data.some(myObj => myObj.matricNumber == obj.matricNumber)
-    if(emptyProp || userByEmail || userByMatric || obj.password.length < 7) {
-      return false
-    } else {
-        return true
+    validate(obj){
+      this.errors = [];
+
+      for (const property in obj) {
+          if(obj[property] === ""){
+              this.errors.push(`${property} should not be empty`);
+          }
       }
-    }
+
+      if (this.getByEmail(obj.email)){
+          this.errors.push(`A user with specified email address already exists`);
+      }
+
+      if (this.getByMatricNumber(obj.matricNumber)){
+          this.errors.push(`A user with specified matric number already exists`);
+      }
+
+      if(obj.password.length < 7){
+          this.errors.push("Password should have at least 7 characters");
+      }
+
+      return (this.errors.length > 0) ? false : true;
+  }
 }
 
 // Do not worry about the below for now; It is included so that we can test your code

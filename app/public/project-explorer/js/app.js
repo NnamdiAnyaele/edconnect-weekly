@@ -66,19 +66,19 @@ if (currentPage.includes("/project-explorer/register.html")) {
         body: JSON.stringify(data),
       });
 
-      console.log("res", res);
       const response = await res.json();
+      console.log(response)
       if (response.status === "ok") {
         document.cookie = `uid=${response.data.id};path=/`;
         window.location.href = "/project-explorer/index.html";
       } else {
-        let errorDiv = document.createElement("div");
-        errorDiv.classList.add("alert", "alert-danger", "w-100");
+        let div = document.createElement("div");
+        div.classList.add("alert", "alert-danger", "w-100");
         let errors = response.errors.map((error) => {
           return `<p>${error}</p>`;
         });
-        errorDiv.innerHTML = errors.join("");
-        signupForm.prepend(errorDiv);
+        div.innerHTML = errors.join("");
+        signupForm.prepend(div);
         throw "error occurred";
       }
     } catch (error) {
