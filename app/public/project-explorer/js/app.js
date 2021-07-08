@@ -33,8 +33,8 @@ if (currentPage.includes("/project-explorer/register.html")) {
   getPrograms();
   getGraduationYears();
 
-  const signUpForm = document.getElementById("signUpForm");
-  signUpForm.addEventListener("submit", (event) => {
+  const signupForm = document.getElementById("signupForm");
+  signupForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const firstname = document.getElementById("firstName").value;
     const lastname = document.getElementById("lastName").value;
@@ -192,7 +192,7 @@ if (currentPage.includes("/project-explorer/createproject.html")) {
           return `<p>${error}</p>`;
         });
         div.innerHTML = errors.join("");
-        signupForm.prepend(div);
+        createProjectForm.prepend(div);
         throw "error occurred";
       }
     } catch (error) {
