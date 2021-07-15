@@ -9,9 +9,9 @@ const Header = () => {
   const history = useHistory()
 
   useEffect(() => {
-    const cookies = document.cookie.match("(^|;)\\s*uid\\s*=\\s*([^;]+)")
-    if (cookies) {
-      fetch(`/api/users/${cookies.pop()}`)
+    const cookie = document.cookie.match("(^|;)\\s*uid\\s*=\\s*([^;]+)")
+    if (cookie) {
+      fetch(`/api/users/${cookie.pop()}`)
         .then(res => res.json())
         .then(data => setUser(data.firstname))
       setIsLoggedIn(true)
@@ -30,7 +30,9 @@ const Header = () => {
       <Nav>
         <Navbar.Brand href="/">Project Explorer</Navbar.Brand>
         <Form inline>
-          <Form.Control type="text" placeholder="Search Projects" />
+          <Form.Label htmlFor="search-project-nav" srOnly>
+          </Form.Label>
+          <Form.Control type="text" placeholder="Search Projects" id="search-project-nav" />
           <Button variant="outline-light" type="submit" className="ml-3 mr-2">
             Search
           </Button>
